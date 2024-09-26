@@ -48,6 +48,7 @@ class IndexView(generic.ListView):
     context_object_name= "latest_question_list"
 
     def get_queryset(self):
+        print('\tindex view is running')
         return Question.objects.filter(pub_date__lte=timezone.now()).order_by("-pub_date")[:5]
 
 # DetailView - remember in url, we passed in <int:pk> in the url parameters.
