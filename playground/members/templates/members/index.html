@@ -1,0 +1,13 @@
+{% extends "./layout.html" %}
+
+{% block title %}
+    Register new user
+{% endblock %}
+{% block content %}
+    <div>This block is inserted into the layout!</div>
+    <form method="post">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

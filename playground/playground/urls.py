@@ -20,6 +20,7 @@ from django.urls import include, path
 urlpatterns = [
     path('polls/', include("polls.urls")), # include to allow other url files
     path('admin/', admin.site.urls), # this is the only exception to the rule!
+    path('members/', include("members.urls"))
 ]
 
 # route and view are required!
